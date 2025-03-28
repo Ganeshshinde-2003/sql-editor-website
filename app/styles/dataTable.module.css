@@ -1,0 +1,78 @@
+.tableWrapper{
+  width: 60vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.tableContainer {
+  overflow: auto;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
+
+.tableContainer::-webkit-scrollbar {
+  display: none; 
+}
+.tableContainer table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableContainer th,
+.tableContainer td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.tableContainer th {
+  background-color: #f1f1f1;
+  position: sticky;
+  top: 0;
+}
+
+.tableContainer td {
+  white-space: nowrap;
+}
+.noData {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+  margin-top: 20px;
+}
+
+.dataFetcher{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 20px;
+}
+
+.dataSet{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.dataSet label {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.dataSet select {
+  background-color: white;
+  border: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.dataSet select:hover {
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+}
