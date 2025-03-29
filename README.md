@@ -55,7 +55,7 @@ This is a web-based SQL query runner built as part of the Atlan Frontend Interns
 - Initial load time: ~1.2s (Measured via Performance tab in DevTools).
 
 ## Deployment
-The app is deployed on **Vercel**. You can access it here: [https://sql-editor-website.vercel.app/](#)
+The app is deployed on **Vercel**. You can access it here: [https://sql-editor-website.vercel.app/](https://sql-editor-website.vercel.app/)
 
 ## Video Walkthrough
 A walkthrough video explaining the app features and technical decisions is available [here](#).
