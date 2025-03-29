@@ -15,6 +15,13 @@ This is a web-based SQL query runner built as part of the Atlan Frontend Interns
 - Toggle mechanism to switch between multiple queries and their respective data.
 - Responsive and minimal UI.
 
+## How It Works
+- User enters an SQL-like query in the input field.
+- The app matches the query with a predefined dataset.
+- The relevant dataset is displayed in a paginated table.
+- Users can toggle between different queries.
+- No actual SQL execution is performed; data is purely static.
+
 ## Folder Structure
 ```
 📦 app
@@ -64,6 +71,11 @@ A walkthrough video explaining the app features and technical decisions is avail
 - **Efficient Data Handling:** Used PapaParse to handle CSV parsing efficiently.
 - **Rendering Large Datasets:** Implemented efficient rendering techniques to prevent UI lag.
 
+## Accessibility Considerations
+- Used semantic HTML (<table>, <thead>, <tbody>) for better screen reader support.
+- Followed contrast & readability best practices for UI.
+
+
 ## External Libraries Used
 - `papaparse` (CSV Parsing)
 - `react` and `next`
@@ -71,10 +83,3 @@ A walkthrough video explaining the app features and technical decisions is avail
 ## Future Enhancements
 - Implement a syntax highlighter for SQL queries.
 - Add support for more predefined datasets.
-
----
-
-### Notes
-- No backend or actual SQL query execution is involved.
-- The displayed data is static and predefined.
-- No syntax validation for SQL queries is implemented.
