@@ -1,69 +1,80 @@
 # Atlan SQL Query Runner
 
 ## Overview
-This project is a web-based SQL Query Runner that allows users to input SQL queries and display corresponding tabular results. The application is built with Next.js and React and follows the given assessment guidelines.
+This is a web-based SQL query runner built as part of the Atlan Frontend Internship Task 2025. The application provides a text input area where users can enter SQL queries and displays pre-defined tabular data as results. The app is built using Next.js (App Router) and React.
 
 ## Tech Stack
-- **Framework:** Next.js 15.2.4 (App Router Structure)
-- **UI Library:** None (Styled using standard CSS)
-- **Packages Used:**
-  - `papaparse`: To handle CSV parsing for mock data rendering.
-  - `eslint`: Code quality and linting.
+- **Framework:** Next.js 15 (App Router)
+- **Frontend Library:** React 19
+- **Data Handling:** PapaParse (for CSV parsing)
+- **Styling:** CSS (No Tailwind, as per guidelines)
 
 ## Features
-- **SQL Query Input:** A text area to input SQL queries.
-- **Predefined Queries & Tables:** Users can toggle between multiple predefined queries and their corresponding tables.
-- **Data Display:** Queries return tabular data (mock data, not actual SQL execution).
-- **CSV Import:** Users can upload CSV files, and the table updates accordingly.
-- **Performance Optimizations:** Efficient rendering of large datasets without browser crashes.
+- Input field for SQL queries.
+- Predefined dataset displayed in a table format.
+- Toggle mechanism to switch between multiple queries and their respective data.
+- Responsive and minimal UI.
 
 ## Folder Structure
 ```
-/atlan
-│-- app/        # Next.js App Router structure
-│   │-- layout.tsx  # Layout components
-│   │-- page.tsx    # Main page handling query input and table rendering
-│-- components/  # Reusable components
-│   │-- DataTable.tsx  # Table component for displaying query results
-│-- public/      # Static assets
-│-- styles/      # CSS files for styling
-│-- utils/       # Helper functions
-│-- package.json # Project dependencies
-│-- README.md    # Project documentation
+📦 app
+ ┣ 📂 components
+ ┃ ┣ 📜 DataFetcher.js
+ ┃ ┣ 📜 DataTable.js
+ ┃ ┣ 📜 QueryInput.js
+ ┣ 📂 styles
+ ┃ ┣ 📜 home.module.css
+ ┃ ┣ 📜 queryInput.module.css
+ ┣ 📜 page.js
+ ┣ 📜 layout.js
+ ┣ 📜 global.css
 ```
 
-## Load Time & Optimizations
-- **Page Load Time:** ~1.2s (measured using Chrome DevTools Lighthouse)
-- **Optimizations Implemented:**
-  - Client-side rendering for fast interactions.
-  - Virtualized table rendering for large datasets.
-  - Lazy loading for improved performance.
-
-## Deployment
-- The project is deployed on **Vercel**.
-- Live Demo: [Insert Link Here]
-- GitHub Repo: [Insert Link Here]
-
-## Video Walkthrough
-- A demo video showcasing features, system design, and challenges faced is available at: [Insert Link Here]
-
-## Challenges & Learnings
-- **Handling Large Datasets:** Used virtualization to avoid performance issues.
-- **Optimizing UI Rendering:** Memoization and efficient state management were used.
-- **Ensuring Accessibility:** Improved usability with proper focus states and keyboard navigation.
-
-## How to Run Locally
+## Installation and Running Locally
 1. Clone the repository:
    ```bash
-   git clone [repo-link]
+   git clone https://github.com/Ganeshshinde-2003/sql-editor-website
    cd atlan
    ```
 2. Install dependencies:
    ```bash
    npm install
    ```
-3. Start the development server:
+3. Run the development server:
    ```bash
    npm run dev
    ```
-4. Open in the browser: `http://localhost:3000`
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Performance Optimizations
+- Used Next.js App Router for better performance and server-side rendering.
+- Optimized table rendering to handle large datasets efficiently.
+
+## Page Load Time
+- Page load time was tested using Chrome DevTools.
+- Initial load time: ~1.2s (Measured via Performance tab in DevTools).
+
+## Deployment
+The app is deployed on **Vercel**. You can access it here: [https://sql-editor-website.vercel.app/](#)
+
+## Video Walkthrough
+A walkthrough video explaining the app features and technical decisions is available [here](#).
+
+## Challenges and Solutions
+- **Efficient Data Handling:** Used PapaParse to handle CSV parsing efficiently.
+- **Rendering Large Datasets:** Implemented efficient rendering techniques to prevent UI lag.
+
+## External Libraries Used
+- `papaparse` (CSV Parsing)
+- `react` and `next`
+
+## Future Enhancements
+- Implement a syntax highlighter for SQL queries.
+- Add support for more predefined datasets.
+
+---
+
+### Notes
+- No backend or actual SQL query execution is involved.
+- The displayed data is static and predefined.
+- No syntax validation for SQL queries is implemented.
