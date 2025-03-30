@@ -72,7 +72,7 @@ A walkthrough video explaining the app features and technical decisions is avail
 - **Rendering Large Datasets:** Implemented efficient rendering techniques to prevent UI lag.
 
 ## Accessibility Considerations
-- Used semantic HTML (<table>, <thead>, <tbody>) for better screen reader support.
+- Used semantic HTML (```<table>, <thead>, <tbody>```) for better screen reader support.
 - Followed contrast & readability best practices for UI.
 
 
