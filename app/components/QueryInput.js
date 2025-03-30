@@ -20,12 +20,8 @@ export default function QueryInput({ onQueryChange, onRunQuery }) {
     "SELECT * FROM orders LIMIT 5;",
     "SELECT COUNT(*) FROM orders;",
     "SELECT orderID, customerID, shipCountry FROM orders WHERE shipCountry = 'Germany';",
-    "SELECT orderID, customerID, orderDate FROM orders WHERE orderDate BETWEEN '2025-03-01' AND '2025-03-31';",
-    "SELECT orderID, customerID, orderDate FROM orders WHERE shippedDate IS NULL;",
-
     "SELECT * FROM order_details LIMIT 5;",
     "SELECT COUNT(*) FROM order_details;",
-    "SELECT productID, unitPrice, quantity, discount FROM order_details WHERE orderID = 10248;",
     "SELECT productID, SUM(unitPrice * quantity) AS totalRevenue FROM order_details GROUP BY productID;",
     "SELECT productID, SUM(discount) AS totalDiscount FROM order_details GROUP BY productID;",
   ];

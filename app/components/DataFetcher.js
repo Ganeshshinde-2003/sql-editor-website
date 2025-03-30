@@ -33,32 +33,6 @@ const predefinedQueries = {
           })),
     },
 
-  // Get all orders placed in March 2025
-  "SELECT orderID, customerID, orderDate FROM orders WHERE orderDate BETWEEN '2025-03-01' AND '2025-03-31';":
-    {
-      dataset: "orders",
-      process: (data) =>
-        data.filter(({ orderDate }) => {
-          const date = new Date(orderDate);
-          return (
-            date >= new Date("2025-03-01") && date <= new Date("2025-03-31")
-          );
-        }),
-    },
-
-  // Get pending orders (shippedDate is NULL)
-  "SELECT orderID, customerID, orderDate FROM orders WHERE shippedDate IS NULL;":
-    {
-      dataset: "orders",
-      process: (data) =>
-        data
-          .filter(({ shippedDate }) => !shippedDate)
-          .map(({ orderID, customerID, orderDate }) => ({
-            orderID,
-            customerID,
-            orderDate,
-          })),
-    },
 
   "SELECT * FROM employees LIMIT 5;": {
     dataset: "employees",
@@ -124,22 +98,7 @@ const predefinedQueries = {
     dataset: "order_details",
     process: (data) => [{ count: data.length }],
   },
-
-  // Get all order details for a specific OrderID (e.g., 10248)
-  "SELECT productID, unitPrice, quantity, discount FROM order_details WHERE orderID = 10248;":
-    {
-      dataset: "order_details",
-      process: (data) =>
-        data
-          .filter(({ orderID }) => orderID === 10248)
-          .map(({ productID, unitPrice, quantity, discount }) => ({
-            productID,
-            unitPrice,
-            quantity,
-            discount,
-          })),
-    },
-
+  
   // Get total revenue per product
   "SELECT productID, SUM(unitPrice * quantity) AS totalRevenue FROM order_details GROUP BY productID;":
     {
