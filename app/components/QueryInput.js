@@ -6,7 +6,7 @@ export default function QueryInput({ onQueryChange, onRunQuery }) {
   const [query, setQuery] = useState("");
   const [queryMode, setQueryMode] = useState("manual"); // "manual" | "predefined"
 
-  // List of predefined SQL queries (Updated for Correct Columns)
+  // List of predefined SQL queries
   const predefinedQueries = [
     "SELECT * FROM employees LIMIT 5;",
     "SELECT firstName, lastName, title FROM employees WHERE title LIKE '%Manager%';",
