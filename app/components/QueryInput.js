@@ -23,7 +23,6 @@ export default function QueryInput({ onQueryChange, onRunQuery }) {
     "SELECT orderID, customerID, orderDate FROM orders WHERE orderDate BETWEEN '2025-03-01' AND '2025-03-31';",
     "SELECT orderID, customerID, orderDate FROM orders WHERE shippedDate IS NULL;",
 
-    // New queries for order_details
     "SELECT * FROM order_details LIMIT 5;",
     "SELECT COUNT(*) FROM order_details;",
     "SELECT productID, unitPrice, quantity, discount FROM order_details WHERE orderID = 10248;",
@@ -64,7 +63,6 @@ export default function QueryInput({ onQueryChange, onRunQuery }) {
         <div className={styles.switchWrapper}>
           <h2>SQL Query Input</h2>
 
-          {/* Toggle Button */}
           <button
             className={`${styles.toggleSwitch} ${
               queryMode === "predefined" ? styles.active : ""

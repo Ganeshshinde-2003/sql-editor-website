@@ -44,7 +44,7 @@ export default function DataTable({ data }) {
         </table>
       </div>
 
-      {/* Show pagination only if data length > 15 */}
+      {/* Show pagination only if data length > 12 */}
       {data.length > rowsPerPage && (
         <div className={styles.pagination}>
           <button

@@ -8,7 +8,6 @@ import Link from "next/link";
 
 // Predefined Queries with Corresponding Dataset and Processing Logic
 const predefinedQueries = {
-  // Fetch first 5 orders
   "SELECT * FROM orders LIMIT 5;": {
     dataset: "orders",
     process: (data) => data.slice(0, 5),
@@ -70,7 +69,7 @@ const predefinedQueries = {
       dataset: "employees",
       process: (data) =>
         data
-          .filter(({ title }) => title?.toLowerCase().includes("manager")) // ✅ Case-insensitive check
+          .filter(({ title }) => title?.toLowerCase().includes("manager"))
           .map(({ firstName, lastName, title }) => ({
             firstName,
             lastName,
@@ -202,7 +201,7 @@ export default function DataFetcher({ query }) {
       }
     };
     fetchData();
-  }, [query, selectedDataset]); // ✅ Added selectedDataset
+  }, [query, selectedDataset]);
 
   useEffect(() => {
     if (!query.trim()) {
@@ -216,10 +215,8 @@ export default function DataFetcher({ query }) {
       let newData = [...data];
 
       if (predefinedQueries[query]) {
-        // Use predefined query processing logic
         newData = predefinedQueries[query].process(data);
       } else {
-        // Default fallback: Random subset (2-7 rows)
         newData.sort(() => Math.random() - 0.5);
         const randomCount = Math.min(
           Math.floor(Math.random() * 6) + 2,
