@@ -4,7 +4,7 @@ import styles from "../styles/dataTable.module.css";
 
 export default function DataTable({ data }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 15;
+  const rowsPerPage = 14;
 
   if (!data || data.length === 0) {
     return <p className={styles.noData}>No data available.</p>;

@@ -1,10 +1,11 @@
-.tableWrapper{
+.tableWrapper {
   width: 60vw;
   height: 100vh;
   overflow: auto;
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  padding-right: 40px;
 }
 
 .tableContainer {
@@ -13,11 +14,11 @@
   display: flex;
   flex-direction: column;
   scrollbar-width: none;
-  -ms-overflow-style: none; 
+  -ms-overflow-style: none;
 }
 
 .tableContainer::-webkit-scrollbar {
-  display: none; 
+  display: none;
 }
 .tableContainer table {
   width: 100%;
@@ -46,14 +47,15 @@
   margin-top: 20px;
 }
 
-.dataFetcher{
+.dataFetcher {
+  width: 60vw;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 20px 20px;
 }
 
-.dataSet{
+.dataSet {
   display: flex;
   gap: 10px;
   align-items: center;
@@ -75,4 +77,58 @@
 
 .dataSet select:hover {
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pagination {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.pagination button {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dataHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .dataFetcher {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+  }
+  .tableWrapper {
+    width: 100vw;
+    height: auto;
+  }
+}
+@media (max-width: 400px) {
+  .dataFetcher {
+    padding: 10px;
+  }
+  .tableWrapper {
+    padding-right: 20px;
+  }
+  .dataSet {
+    flex-direction: column;
+    gap: 5px;
+    align-items: self-start;
+  }
+  .dataSet label {
+    font-size: 16px;
+  }
+  .dataSet {
+    margin-bottom: 10px;
+  }
+  .dataHeader h3{
+    font-size: 16px;
+  }
 }

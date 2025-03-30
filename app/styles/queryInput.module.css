@@ -192,3 +192,20 @@
 .predefinedQueries button:hover {
   box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.15);
 }
+
+@media (max-width: 700px){
+  .queryInputContainer{
+    height: auto;
+    width: 100vw;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px){
+  .queryInputContainer{
+    padding: 10px;
+  }
+  .switchWrapper h2{
+    font-size: 20px;
+  }
+}

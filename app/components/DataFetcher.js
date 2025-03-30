@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import Papa from "papaparse";
 import DataTable from "./DataTable";
 import styles from "../styles/dataTable.module.css";
+import Image from "next/image";
+import Link from "next/link";
 
 // Predefined Queries with Corresponding Dataset and Processing Logic
 const predefinedQueries = {
@@ -235,16 +237,29 @@ export default function DataFetcher({ query }) {
 
   return (
     <div className={styles.dataFetcher}>
-      <div className={styles.dataSet}>
-        <label>Select Dataset:</label>
-        <select onChange={(e) => setSelectedDataset(e.target.value)}>
-          <option value="employees">Employees</option>
-          <option value="customers">Customers</option>
-          <option value="territories">Territories</option>
-          <option value="orders">Orders</option>
-          <option value="order_details">Order Details</option>
-        </select>
+      <div className={styles.dataHeader}>
+        <div className={styles.dataSet}>
+          <label>Select Dataset:</label>
+          <select onChange={(e) => setSelectedDataset(e.target.value)}>
+            <option value="employees">Employees</option>
+            <option value="customers">Customers</option>
+            <option value="territories">Territories</option>
+            <option value="orders">Orders</option>
+            <option value="order_details">Order Details</option>
+          </select>
+        </div>
+        <Link href="https://github.com/Ganeshshinde-2003/sql-editor-website" target="blank">
+          <Image
+            src="/github.png"
+            alt="GITHUB LINK"
+            width={40}
+            height={40}
+            style={{ objectFit: "cover" }}
+          />
+        </Link>
       </div>
+
+      <h3>Output</h3>
 
       <DataTable data={filteredData} />
     </div>
