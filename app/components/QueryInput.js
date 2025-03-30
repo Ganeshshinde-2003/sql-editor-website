@@ -80,7 +80,6 @@ export default function QueryInput({ onQueryChange, onRunQuery }) {
         </div>
       </div>
       <div className={styles.codeEditor}>
-        {/* Run Query Button (Only visible in manual mode) */}
         {queryMode === "manual" && (
           <div className={styles.buttonContainer}>
             <button className={styles.runButton} onClick={handleRunQuery}>
