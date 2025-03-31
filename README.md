@@ -65,7 +65,7 @@ This is a web-based SQL query runner built as part of the Atlan Frontend Interns
 The app is deployed on **Vercel**. You can access it here: [https://sql-editor-website.vercel.app/](https://sql-editor-website.vercel.app/)
 
 ## Video Walkthrough
-A walkthrough video explaining the app features and technical decisions is available [here](#).
+A walkthrough video explaining the app features and technical decisions is available [here](https://www.loom.com/share/952ed58d2b484018879f14e7163ee635?sid=0075a702-ef0f-4625-9aae-3edbdbfcf7ce).
 
 ## Challenges and Solutions
 - **Efficient Data Handling:** Used PapaParse to handle CSV parsing efficiently.
